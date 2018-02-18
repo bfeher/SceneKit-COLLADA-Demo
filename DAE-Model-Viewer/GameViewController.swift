@@ -11,9 +11,17 @@ import QuartzCore
 import SceneKit
 
 
-
+class DataManager{
+    static let shared = DataManager()
+    var gameVC:GameViewController?
+}
 
 class GameViewController: UIViewController {
+    
+
+    let modelScene = SCNScene(named: "art.scnassets/Pokemon.dae")
+    let childNodeName = "pokemon"
+    
     // MARK: - Enums and Constants
     // Enum used to determine rotation mode:
     private enum RotationMode: Int {
@@ -32,6 +40,7 @@ class GameViewController: UIViewController {
     // MARK: - Outlets and Properties
     @IBOutlet weak var sceneView: SCNView!                      // Our SCNView.
     @IBOutlet weak var axesVisibilitySwitch: UISwitch!          // Switch controlling if we should display axes arrow markers or not.
+
     @IBOutlet weak var rotationModeSwitch: UISegmentedControl!  // Switch controlling which axes to rotate on.
     @IBOutlet weak var gestureKeySV: UIStackView!               // Stack View that holds our gesture key images.
     private var rotationMode: RotationMode!             // A flag to control which axes to rotate on.
@@ -58,6 +67,8 @@ class GameViewController: UIViewController {
         setupCombinedModelAndAxesMarkersNode(in: scene)
         // Setup our scene view:
         setupSceneView(with: scene)
+        
+        DataManager.shared.gameVC = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -145,8 +156,7 @@ class GameViewController: UIViewController {
         axesMarkersNode.position = SCNVector3Zero   // Positions our node on the origin.
         axesMarkersNode.rotation = SCNVector4Zero   // Clears any rotations that might have been performed in arrowsScene. (Unnecessary, but here for reference.)
         // Add our 3D model:
-        let modelScene = SCNScene(named: "art.scnassets/Pokemon.dae")   // Provided for free by artist Simon Telezhkin via TurboSquid. https://www.turbosquid.com/3d-models/free-obj-model-ivysaur-pokemon-sample/1136333
-        modelNode = modelScene?.rootNode.childNode(withName: "pokemon", recursively: true)  // Assigns just the pokemon model to our global variable modelNode.
+       modelNode = modelScene?.rootNode.childNode(withName: childNodeName, recursively: true)  // Assigns just the pokemon model to our global variable modelNode.
         modelNode.position = SCNVector3Zero   // Positions our node on the origin.
         // Place our two object nodes into a combined node for easy paired manipulations:
         combinedNode = SCNNode()
@@ -160,11 +170,13 @@ class GameViewController: UIViewController {
         // Set the scene to the view:
         sceneView.scene = scene
         // Disable default camera controls:
-        sceneView.allowsCameraControl = false
+        sceneView.allowsCameraControl = true
         // Show statistics such as fps and timing information:
         sceneView.showsStatistics = true
         // Configure the view:
         sceneView.backgroundColor = UIColor.black
+        
+        sceneView.antialiasingMode = .multisampling4X
     }
 
     
@@ -334,7 +346,15 @@ class GameViewController: UIViewController {
         combinedNode.rotation = SCNVector4Zero
     }
     
-
+    @IBAction func explore(){
+        let vc = DAEViewController()
+        vc.title = "Debug options"
+        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target:vc, action:#selector(DAEViewController.dismissVC))
+        let nc = UINavigationController(rootViewController: vc)
+        self.navigationController?.present(nc, animated: true, completion: nil)
+        
+        
+    }
     // MARK: - IBAction Handlers
     @IBAction func axesVisibilitySwitched(_ sender: UISwitch) {
         let selectedSegment = RotationMode(rawValue: rotationModeSwitch.selectedSegmentIndex)!

@@ -8,14 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		505FE4E520101D2F004E266F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE4E420101D2F004E266F /* AppDelegate.swift */; };
-		505FE4E720101D2F004E266F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 505FE4E620101D2F004E266F /* art.scnassets */; };
 		505FE4E920101D2F004E266F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FE4E820101D2F004E266F /* GameViewController.swift */; };
 		505FE4EC20101D2F004E266F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505FE4EA20101D2F004E266F /* Main.storyboard */; };
 		505FE4EE20101D2F004E266F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 505FE4ED20101D2F004E266F /* Assets.xcassets */; };
 		505FE4F120101D2F004E266F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505FE4EF20101D2F004E266F /* LaunchScreen.storyboard */; };
+		8317D9882039433E00FD6357 /* DAEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317D9872039433E00FD6357 /* DAEViewController.swift */; };
+		8317D9942039495B00FD6357 /* DAETableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317D9932039495B00FD6357 /* DAETableViewCell.swift */; };
+		8317D99620394BA900FD6357 /* DAEViewController+LNZTreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8317D99520394BA900FD6357 /* DAEViewController+LNZTreeView.swift */; };
+		83C26E372039354900F5452E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 505FE4E620101D2F004E266F /* art.scnassets */; };
+		9F778FC03623AAA9015F7C89 /* Pods_DAE_Model_Viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41760DC55C1B2313C4A48F3F /* Pods_DAE_Model_Viewer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E4D217D6A57A8D1301840A3 /* Pods-DAE-Model-Viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAE-Model-Viewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DAE-Model-Viewer/Pods-DAE-Model-Viewer.debug.xcconfig"; sourceTree = "<group>"; };
+		41760DC55C1B2313C4A48F3F /* Pods_DAE_Model_Viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DAE_Model_Viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		505FE4E120101D2F004E266F /* DAE-Model-Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DAE-Model-Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		505FE4E420101D2F004E266F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		505FE4E620101D2F004E266F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -24,6 +30,10 @@
 		505FE4ED20101D2F004E266F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		505FE4F020101D2F004E266F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		505FE4F220101D2F004E266F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8317D9872039433E00FD6357 /* DAEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAEViewController.swift; sourceTree = "<group>"; };
+		8317D9932039495B00FD6357 /* DAETableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAETableViewCell.swift; sourceTree = "<group>"; };
+		8317D99520394BA900FD6357 /* DAEViewController+LNZTreeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DAEViewController+LNZTreeView.swift"; sourceTree = "<group>"; };
+		8FB528248608F01A3C3E9337 /* Pods-DAE-Model-Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DAE-Model-Viewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-DAE-Model-Viewer/Pods-DAE-Model-Viewer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F778FC03623AAA9015F7C89 /* Pods_DAE_Model_Viewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				505FE4E320101D2F004E266F /* DAE-Model-Viewer */,
 				505FE4E220101D2F004E266F /* Products */,
+				FD166686C796353A33C6CB66 /* Pods */,
+				60B8EAEEFB0F64EBEE152304 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +71,33 @@
 			children = (
 				505FE4E420101D2F004E266F /* AppDelegate.swift */,
 				505FE4E620101D2F004E266F /* art.scnassets */,
-				505FE4E820101D2F004E266F /* GameViewController.swift */,
-				505FE4EA20101D2F004E266F /* Main.storyboard */,
 				505FE4ED20101D2F004E266F /* Assets.xcassets */,
-				505FE4EF20101D2F004E266F /* LaunchScreen.storyboard */,
+				505FE4E820101D2F004E266F /* GameViewController.swift */,
 				505FE4F220101D2F004E266F /* Info.plist */,
+				505FE4EF20101D2F004E266F /* LaunchScreen.storyboard */,
+				505FE4EA20101D2F004E266F /* Main.storyboard */,
+				8317D9872039433E00FD6357 /* DAEViewController.swift */,
+				8317D99520394BA900FD6357 /* DAEViewController+LNZTreeView.swift */,
+				8317D9932039495B00FD6357 /* DAETableViewCell.swift */,
 			);
 			path = "DAE-Model-Viewer";
+			sourceTree = "<group>";
+		};
+		60B8EAEEFB0F64EBEE152304 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41760DC55C1B2313C4A48F3F /* Pods_DAE_Model_Viewer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD166686C796353A33C6CB66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E4D217D6A57A8D1301840A3 /* Pods-DAE-Model-Viewer.debug.xcconfig */,
+				8FB528248608F01A3C3E9337 /* Pods-DAE-Model-Viewer.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 505FE4F520101D2F004E266F /* Build configuration list for PBXNativeTarget "DAE-Model-Viewer" */;
 			buildPhases = (
+				98D7BC0F2DCEDD61D262644E /* [CP] Check Pods Manifest.lock */,
 				505FE4DD20101D2F004E266F /* Sources */,
 				505FE4DE20101D2F004E266F /* Frameworks */,
 				505FE4DF20101D2F004E266F /* Resources */,
+				E1D3B83CF3D80DA58EA2CB9E /* [CP] Embed Pods Frameworks */,
+				9F96E163858CBB27CE6B103A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,8 +162,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				505FE4E720101D2F004E266F /* art.scnassets in Resources */,
 				505FE4F120101D2F004E266F /* LaunchScreen.storyboard in Resources */,
+				83C26E372039354900F5452E /* art.scnassets in Resources */,
 				505FE4EE20101D2F004E266F /* Assets.xcassets in Resources */,
 				505FE4EC20101D2F004E266F /* Main.storyboard in Resources */,
 			);
@@ -135,11 +171,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		98D7BC0F2DCEDD61D262644E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DAE-Model-Viewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F96E163858CBB27CE6B103A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DAE-Model-Viewer/Pods-DAE-Model-Viewer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1D3B83CF3D80DA58EA2CB9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DAE-Model-Viewer/Pods-DAE-Model-Viewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LNZTreeView/LNZTreeView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LNZTreeView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DAE-Model-Viewer/Pods-DAE-Model-Viewer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		505FE4DD20101D2F004E266F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8317D99620394BA900FD6357 /* DAEViewController+LNZTreeView.swift in Sources */,
+				8317D9882039433E00FD6357 /* DAEViewController.swift in Sources */,
+				8317D9942039495B00FD6357 /* DAETableViewCell.swift in Sources */,
 				505FE4E920101D2F004E266F /* GameViewController.swift in Sources */,
 				505FE4E520101D2F004E266F /* AppDelegate.swift in Sources */,
 			);
@@ -276,31 +371,35 @@
 		};
 		505FE4F620101D2F004E266F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E4D217D6A57A8D1301840A3 /* Pods-DAE-Model-Viewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WSJS6VD7PJ;
+				DEVELOPMENT_TEAM = KL43C67G5Z;
 				INFOPLIST_FILE = "DAE-Model-Viewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bencefeher.DAE-Model-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		505FE4F720101D2F004E266F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FB528248608F01A3C3E9337 /* Pods-DAE-Model-Viewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WSJS6VD7PJ;
+				DEVELOPMENT_TEAM = KL43C67G5Z;
 				INFOPLIST_FILE = "DAE-Model-Viewer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bencefeher.DAE-Model-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
