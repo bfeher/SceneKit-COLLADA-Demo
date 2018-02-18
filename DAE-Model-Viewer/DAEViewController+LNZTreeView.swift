@@ -14,7 +14,7 @@ import SceneKit
 
 extension SCNNode:  TreeNodeProtocol {
     public var identifier: String {
-        return debugDescription
+        return name ?? debugDescription
     }
     
 
