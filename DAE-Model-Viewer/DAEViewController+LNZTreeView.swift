@@ -41,7 +41,7 @@ extension DAEViewController: LNZTreeViewDataSource {
     
     func treeView(_ treeView: LNZTreeView, nodeForRowAt indexPath: IndexPath, forParentNode parentNode: TreeNodeProtocol?) -> TreeNodeProtocol {
         guard let parent = parentNode as? SCNNode else {
-            return root! //![indexPath.row]
+            return root!.childNodes[indexPath.row]
         }
 
         return parent.childNodes[indexPath.row]
@@ -54,7 +54,7 @@ extension DAEViewController: LNZTreeViewDataSource {
         if let parent = parentNode as? SCNNode {
             node = parent.childNodes[indexPath.row]
         } else {
-            node = root!//[indexPath.row]
+            node =  root!.childNodes[indexPath.row]
         }
         
         if node.isExpandable {
