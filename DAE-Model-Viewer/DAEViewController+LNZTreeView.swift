@@ -35,6 +35,7 @@ extension DAEViewController: LNZTreeViewDataSource {
             return root!.childNodes.count
         }
         
+ 
         return parent.childNodes.count
     }
     
@@ -75,6 +76,7 @@ extension DAEViewController: LNZTreeViewDataSource {
 
 extension DAEViewController: LNZTreeViewDelegate {
     func treeView(_ treeView: LNZTreeView, didExpandNodeAt indexPath: IndexPath, forParentNode parentNode: TreeNodeProtocol?){
+       
         
     }
  
@@ -83,6 +85,10 @@ extension DAEViewController: LNZTreeViewDelegate {
     }
 
     func treeView(_ treeView: LNZTreeView, didSelectNodeAt indexPath: IndexPath, forParentNode parentNode: TreeNodeProtocol?){
-        
+        print("TODO - toggle visibility parentNode",parentNode ?? "")
+        guard let parent = parentNode as? SCNNode else {
+            return
+        }
+        parent.isHidden = !parent.isHidden
     }
 }
