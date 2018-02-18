@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePL-6f-VKh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ePL-6f-VKh">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -70,24 +69,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="8xE-E2-ba4">
                         <leftBarButtonItems>
-                            <barButtonItem title="Show Axes:" id="5P5-iQ-b1J">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </barButtonItem>
                             <barButtonItem id="2tG-OF-5dk">
                                 <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Qfz-JT-Onp">
-                                    <rect key="frame" x="119.5" y="6.5" width="51" height="31"/>
+                                    <rect key="frame" x="20" y="6.5" width="51" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <connections>
                                         <action selector="axesVisibilitySwitched:" destination="BV1-FR-VrT" eventType="valueChanged" id="7qj-gZ-bs3"/>
                                     </connections>
                                 </switch>
                             </barButtonItem>
+                            <barButtonItem title="Explore" id="bcv-ta-LWK">
+                                <connections>
+                                    <action selector="explore" destination="BV1-FR-VrT" id="pKF-lo-McW"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="　Rotation Mode:" id="0DX-Kf-920">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </barButtonItem>
                             <barButtonItem id="d2M-pF-kkD">
                                 <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="5s2-mj-UjT">
-                                    <rect key="frame" x="323.5" y="7.5" width="259" height="29"/>
+                                    <rect key="frame" x="292" y="7.5" width="259" height="29"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <segments>
                                         <segment title="" image="free-eng-50x21"/>

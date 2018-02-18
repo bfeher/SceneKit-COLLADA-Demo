@@ -1,0 +1,6 @@
+framework module LNZTreeView {
+  umbrella header "LNZTreeView-umbrella.h"
+
+  export *
+  module * { export * }
+}
